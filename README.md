@@ -34,7 +34,7 @@
 
 ## Preview Front-End
 
-![PDP Inquiry Form](/readme-images/inquiry-form.png.png "PDP Inquiry Form")
+![PDP Inquiry Form](/readme-images/inquiry-form.png "PDP Inquiry Form")
 
 
 ## Module Admin Configuration Settings
