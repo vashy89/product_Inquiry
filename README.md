@@ -32,26 +32,47 @@
 
 4. Run `php bin/magento c:c`
 
-## Preview will be added
+## Preview Front-End
 
-![timer-in-categoryPage](/readme-images/Timer-at-categoryPage.png "timer-in-categoryPage")
+![PDP Inquiry Form](/readme-images/inquiry-form.png.png "PDP Inquiry Form")
 
 
-## Module Config Settings
+## Module Admin Configuration Settings
 
-![timer-in-categoryPage](/readme-images/Timer-at-categoryPage.png "timer-in-categoryPage")
+**Go to : Admin->store->configuration->pwd->product_inquiry_form->options->enable**
 
+## Gmail SMTP Creds
+
+- Go to your Google Account and choose Security on the left panel.
+
+- On the Signing in to Google tab, select App Passwords.
+
+- ![App-Password](/readme-images/App-Password.png "App-Password")
+
+- Generate new Password for the gmail account to be used in SMTP creds Auth.
+
+- ![Generate-Password](/readme-images/gmail-app-pass.png "Generate-Password")
+
+## Configur SMTP in Admin Panel
+
+-  **Go to : Admin->store->configuration->advance->system->mail sending settings**
+
+- Place your gmail credentials.
+
+- ![smtp-configuration](/readme-images/smtp-configuration.png "smtp-configuration")
+
+## Admin Reply Option
+
+- ![admin-inquiry](/readme-images/admin-inquiry.png "admin-inquiry")
 
 ## Known issues
-- Database Table not created whle installing module.
+- Database Table not created while installing module.
 `Follow Step 3,4 from Installation process`
 
 - **Notification E-Mails could go to spam folder in gmail or any other mail platform**
 
-## Developer informations
-- Vashishtha Chauhan
 
-## Developer informations
+## Developer Information
 - Vashishtha Chauhan
 - Email `vashishtha.prime@gmail.com`
 - Mobile `+91 9898121095`
