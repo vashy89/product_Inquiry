@@ -1,0 +1,88 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 40px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .submit-container {
+    position: relative;
+  }
+
+  .inq-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .form-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #form-success-msg {
+    display: none;
+  }
+</style>
+<div class="form-container" id="product-inquiry-form" action="#" method="post">
+    <form id="inquiry-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="customer_name" placeholder="Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="subject">Inquiry Subject:</label>
+      <input type="text" id="subject" name="inquiry_subject" placeholder="Inquiry Title" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Yopur Detailed Inquiry" required></textarea>
+
+      <input type="hidden" name="product_sku" value="<?= $block->getCurrentProduct()->getSku();?>">
+      <input type="hidden" name="inq_gen" value="<?= date('Y-m-d H:i:s'); ?>">
+
+      <div class="submit-container">
+        <div class="inq-loader"><img src="<?php echo $this->getViewFileUrl('Pwc_ProductInquiry::images/formLoader.gif'); ?>" /></div>
+        <button type="submit">Submit Inquiry</button>
+      </div>
+    </form>
+
+    <h4 id="form-success-msg">Your Inquiry has been Submited.</h4>
+  </div>
+
+<script type="text/x-magento-init">
+{
+    "#product-inquiry-form": {
+        "Pwc_ProductInquiry/js/product-inquiry": {}
+    }
+}
+</script>

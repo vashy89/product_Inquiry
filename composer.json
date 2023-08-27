@@ -1,0 +1,29 @@
+{
+  "name": "pwc/product-inquiry",
+  "description": "Product Inquiry Form and Notification Module.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "authors": [
+        {
+            "name": "vashishtha chauhan",
+            "email": "vashishtha.prime@gmail.com"
+        }
+    ],
+  "require": {
+      "php": "~8.1.0||~8.2.0",
+      "composer/composer": "^2.0",
+      "magento/module-catalog": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Pwc\\ProductInquiry\\": ""
+    }
+  }
+}

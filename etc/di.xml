@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Pwc\ProductInquiry\Api\CustProdInqRepositoryInterface" type="Pwc\ProductInquiry\Model\CustProdInqRepository"/>
+	<preference for="Pwc\ProductInquiry\Api\Data\CustProdInqInterface" type="Pwc\ProductInquiry\Model\CustProdInq"/>
+	<preference for="Pwc\ProductInquiry\Api\Data\CustProdInqSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Pwc\ProductInquiry\Model\ResourceModel\CustProdInq\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">pwc_productinquiry_custprodinq</argument>
+			<argument name="resourceModel" xsi:type="string">Pwc\ProductInquiry\Model\ResourceModel\CustProdInq\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="pwc_productinquiry_custprodinq_listing_data_source" xsi:type="string">Pwc\ProductInquiry\Model\ResourceModel\CustProdInq\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

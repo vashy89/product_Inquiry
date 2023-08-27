@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="pwc_productinquiry_custprodinq" resource="default" engine="innodb" comment="pwc_productinquiry_custprodinq Table">
+		<column xsi:type="int" name="custprodinq_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="custprodinq_id"/>
+		</constraint>
+		<column name="product_sku" nullable="true" xsi:type="varchar" comment="product_sku" length="255"/>
+		<column name="customer_name" nullable="true" xsi:type="varchar" comment="customer_name" length="255"/>
+		<column name="email" nullable="true" xsi:type="varchar" comment="email" length="255"/>
+		<column name="inquiry_subject" nullable="true" xsi:type="varchar" comment="inquiry_subject" length="255"/>
+		<column name="message" nullable="true" xsi:type="text" comment="message"/>
+		<column name="inq_gen" nullable="true" xsi:type="timestamp" comment="inq_gen"/>
+		<column name="reply" nullable="true" xsi:type="datetime" comment="reply"/>
+		<column name="admin_reply" nullable="true" xsi:type="varchar" comment="product_sku" length="255"/>
+	</table>
+</schema>

@@ -1,0 +1,19 @@
+{
+    "pwc_productinquiry_custprodinq": {
+        "column": {
+            "custprodinq_id": true,
+            "inquiry_id": true,
+            "product_sku": true,
+            "customer_name": true,
+            "email": true,
+            "inquiry_subject": true,
+            "message": true,
+            "inq_gen": true,
+            "reply": true,
+            "admin_reply": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
